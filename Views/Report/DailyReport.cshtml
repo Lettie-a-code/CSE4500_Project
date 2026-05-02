@@ -1,0 +1,73 @@
+﻿@{
+    ViewData["Title"] = "Daily Report";
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dog Activity Report</title>
+    <link rel="stylesheet" href="@Url.Content("~/css/report.css")" />
+</head>
+
+<body>
+    <div class="layout">
+
+        <!-- NAVIGATION -->
+        <!--<button class="menu-toggle">☰ Menu</button>-->
+        <div class="mobile-nav">
+            <h2>🐾 Menu</h2>
+            <ul>
+                <li><a href="home_tech.html">Home</a></li>
+  
+            </ul>
+        </div>
+        
+        <!-- MAIN CONTENT -->
+        <section class="main-content">
+            <h2>My day</h2>
+            <section class="form-container">
+                 <form>
+
+                    <label>🐶 Name of Dog</label>
+                    <input type="text" placeholder="Enter dog's name">
+
+                    <label>🎾 Play Style</label>
+                    <select>
+                        <option>Gentle</option>
+                        <option>Withdrawn</option>
+                        <option>Shy</option>
+                        <option>Dominant</option>
+                    </select>
+
+                    <label>😊 Temperament</label>
+                    <select>
+                        <option>Happy</option>
+                        <option>Anxious</option>
+                        <option>Aggressive</option>
+                    </select>
+
+                    <!-- Appetite -->
+                    <section class="card">
+                        <div class="section-title">🍽 Appetite</div>
+                        <div class="radio-group">
+                            <label><input type="radio" name="appetite"> Poor</label>
+                            <label><input type="radio" name="appetite"> Normal</label>
+                        </div>
+                    </section>
+
+                    <!-- Notes -->
+                    <section class="card">
+                        <div class="section-title">📝 Notes</div>
+                        <textarea rows="3" placeholder="Add any notes about the dog's day..."></textarea>
+                    </section>
+
+                    <button type="submit">Submit Report</button>
+
+                </form>
+            </section>
+
+        </section>
+    </div>
+</body>
+</html>
+

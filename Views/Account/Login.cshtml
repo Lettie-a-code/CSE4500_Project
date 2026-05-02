@@ -1,0 +1,45 @@
+﻿@model CSE4500.Models.LoginViewModel
+
+<link rel="stylesheet" href="@Url.Content("~/css/Login.css")" />
+
+<div class="grid-container">
+    <div class="header bg-gray-800 text-center text-black">
+        <h1>Happy Tails</h1>
+        <h2>Dog Day Care Attendance Manager</h2>
+    </div>
+
+    <div class="main-container">
+        <div class="content">
+            <h2>Welcome</h2>
+            <img src="@Url.Content("~/images/homePage.png")" alt="Logo" width="250" height="300" />
+        </div>
+
+        <div class="login-container">
+            <h2>Login</h2>
+
+            <form asp-action="Login" method="post" class="login-form">
+
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+                <div>
+                    <label asp-for="Email"></label>
+                    <input asp-for="Email" class="input-field" placeholder="Please enter your email" />
+                    <span asp-validation-for="Email" class="text-danger"></span>
+                </div>
+
+                <div>
+                    <label asp-for="Password"></label>
+                    <input asp-for="Password" type="password" class="input-field" placeholder="Please enter your password" />
+                    <span asp-validation-for="Password" class="text-danger"></span>
+                </div>
+
+                <button type="submit">Login</button>
+
+            </form>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

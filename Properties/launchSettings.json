@@ -1,0 +1,12 @@
+{
+  "profiles": {
+    "CSE4500": {
+      "commandName": "Project",
+      "launchBrowser": true,
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      },
+      "applicationUrl": "https://localhost:56253;http://localhost:56254"
+    }
+  }
+}
