@@ -10,6 +10,10 @@ public class DogController : Controller
     {
         return View();
     }
+    public IActionResult EnrollmentCensus()
+    {
+        return View();
+    }
     public IActionResult Register()
     {
         return View();

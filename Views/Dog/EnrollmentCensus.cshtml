@@ -1,0 +1,61 @@
+﻿@{
+    ViewData["Title"] = "Registered Dogs";
+}
+@{
+    ViewData["Title"] = "Enrollment Census";
+}
+
+<link rel="stylesheet" href="~/css/admin-tables.css" />
+
+<div class="dashboard-container">
+    <h2>Registered Dogs - Administration View</h2>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Dog Name</th>
+                <th>Guardian Name</th>
+                <th>Telephone</th>
+                <th>Shots Expiration Date</th>
+                <th>Issues to Address</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td data-label="Dog Name">Max</td>
+                <td data-label="Guardian Name">Sarah Johnson</td>
+                <td data-label="Telephone">(555) 123-4567</td>
+                <td data-label="Shots Expiration Date" class="status-valid">12/15/2026</td>
+                <td data-label="Issues to Address">None</td>
+            </tr>
+            <tr>
+                <td data-label="Dog Name">Bella</td>
+                <td data-label="Guardian Name">Michael Torres</td>
+                <td data-label="Telephone">(555) 987-2234</td>
+                <td data-label="Shots Expiration Date" class="status-expired">04/10/2025</td>
+                <td data-label="Issues to Address">Vaccination renewal required</td>
+            </tr>
+            <tr>
+                <td data-label="Dog Name">Charlie</td>
+                <td data-label="Guardian Name">Amanda Lee</td>
+                <td data-label="Telephone">(555) 345-8890</td>
+                <td data-label="Shots Expiration Date" class="status-valid">09/02/2026</td>
+                <td data-label="Issues to Address">Allergy to chicken treats</td>
+            </tr>
+            <tr>
+                <td data-label="Dog Name">Luna</td>
+                <td data-label="Guardian Name">David Patel</td>
+                <td data-label="Telephone">(555) 654-7781</td>
+                <td data-label="Shots Expiration Date" class="status-valid">01/28/2027</td>
+                <td data-label="Issues to Address">Monitor hip mobility</td>
+            </tr>
+            <tr>
+                <td data-label="Dog Name">Rocky</td>
+                <td data-label="Guardian Name">Emily Carter</td>
+                <td data-label="Telephone">(555) 222-1133</td>
+                <td data-label="Shots Expiration Date" class="status-expired">03/01/2025</td>
+                <td data-label="Issues to Address">Follow up on booster shots</td>
+            </tr>
+        </tbody>
+    </table>
+</div>

@@ -29,9 +29,18 @@
 
 
         <div class="menu">
-            <ul>             
-                <li><a asp-controller="Dashboard" asp-action="Admin">Home</a></li>
-                <li><a asp-controller="Dog" asp-action="DogList">View dogs registered</a></li>
+            <ul>
+                @if (User.IsInRole("Admin"))
+                {
+                    <li><a asp-controller="Dashboard" asp-action="Admin">Home</a></li>
+                    <li><a asp-controller="Dog" asp-action="EnrollmentCensus">View dogs registered in program</a></li>
+                }
+                @if (User.IsInRole("Technician"))
+                {
+                    <li><a asp-controller="Dashboard" asp-action="Tech">Home</a></li>
+                    <li><a asp-controller="Dog" asp-action="DogList">Dogs in program today</a></li>
+
+                }
                 <li><a asp-controller="Report" asp-action="DailyReport">Daily dog report portal</a></li>
                 <li><a asp-controller="Dog" asp-action="CheckOut">Pooch check out</a></li>
                 <li><a asp-controller="Dog" asp-action="Register">New Client Registration</a></li>
@@ -87,7 +96,6 @@
         // Run the function once immediately, then update every second (1000ms).
         displayCurrentDateTime();
         setInterval(displayCurrentDateTime, 1000);
-    </script>
-    </div>
+    </script> 
 </body>
 </html>

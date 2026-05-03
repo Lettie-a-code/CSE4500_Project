@@ -2,3 +2,70 @@
     ViewData["Title"] = "Dog List";
     <h1>Dog List</h1>
 }
+@{
+    ViewData["Title"] = "Active Check-Ins";
+}
+<link rel="stylesheet" href="~/css/admin-tables.css" />
+
+<div class="menu">
+    <ul>
+        <li><a asp-controller="Dashboard" asp-action="Admin">Home</a></li>
+        <li><a asp-controller="Dog" asp-action="DogList">View dogs registered</a></li>
+        <li><a asp-controller="Report" asp-action="DailyReport">Daily dog report portal</a></li>
+        <li><a asp-controller="Dog" asp-action="CheckOut">Pooch check out</a></li>
+        <li><a asp-controller="Dog" asp-action="Register">New Client Registration</a></li>
+    </ul>
+</div>
+
+<div class="dashboard-container">
+    <h2>Active Check-Ins</h2>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Check In Time</th>
+                <th>Play Style</th>
+                <th>Special Note</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Max</td>
+                <td>8:05 AM</td>
+                <td><span class="badge energetic">Energetic</span></td>
+                <td>Loves group play. Monitor during feeding.</td>
+            </tr>
+            <tr>
+                <td>Bailey</td>
+                <td>8:22 AM</td>
+                <td><span class="badge gentle">Gentle</span></td>
+                <td>Prefers small groups.</td>
+            </tr>
+            <tr>
+                <td>Charlie</td>
+                <td>9:00 AM</td>
+                <td><span class="badge independent">Independent</span></td>
+                <td>Needs quiet rest breaks.</td>
+            </tr>
+            <tr>
+                <td>Luna</td>
+                <td>9:15 AM</td>
+                <td><span class="badge energetic">Energetic</span></td>
+                <td>High stamina. Monitor water intake.</td>
+            </tr>
+            <tr>
+                <td>Rocky</td>
+                <td>9:45 AM</td>
+                <td><span class="badge gentle">Gentle</span></td>
+                <td>Friendly with new dogs.</td>
+            </tr>
+            <tr>
+                <td>Daisy</td>
+                <td>10:10 AM</td>
+                <td><span class="badge independent">Independent</span></td>
+                <td>Requires medication at 1 PM.</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
