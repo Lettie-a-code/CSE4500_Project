@@ -11,14 +11,20 @@
 
 <body>
     <div class="layout">
-
-        <!-- NAVIGATION -->
-        <!--<button class="menu-toggle">☰ Menu</button>-->
-        <div class="mobile-nav">
-            <h2>🐾 Menu</h2>
+        <div class="menu">
             <ul>
-                <li><a href="home_tech.html">Home</a></li>
-  
+                @if (User.IsInRole("Admin"))
+                {
+                    <li><a asp-controller="Dashboard" asp-action="Admin">Home</a></li>
+                    <li><a asp-controller="Dog" asp-action="EnrollmentCensus">View dogs registered in program</a></li>
+                }
+                @if (User.IsInRole("Technician"))
+                {
+                    <li><a asp-controller="Dashboard" asp-action="Employee">Home</a></li>
+                    <li><a asp-controller="Dog" asp-action="DogList">Dogs in program today</a></li>
+
+                }
+                
             </ul>
         </div>
         

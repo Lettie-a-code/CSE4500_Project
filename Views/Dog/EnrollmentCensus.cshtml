@@ -6,6 +6,15 @@
 }
 
 <link rel="stylesheet" href="~/css/admin-tables.css" />
+<nav class="sidebar">
+    <h2>🐾 Menu</h2>
+    <ul>
+        <li><a asp-controller="Dashboard" asp-action="Admin">Home</a></li>
+        <li><a asp-controller="Dog" asp-action="CheckIn">Pooch check in</a></li>
+        <li><a asp-controller="Report" asp-action="DailyReport">Daily dog report portal</a></li>
+        <li><a asp-controller="Dog" asp-action="CheckOut">Pooch check out</a></li>
+    </ul>
+</nav>
 
 <div class="dashboard-container">
     <h2>Registered Dogs - Administration View</h2>

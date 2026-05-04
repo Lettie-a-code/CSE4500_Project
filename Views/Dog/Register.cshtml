@@ -13,6 +13,7 @@
     <style>
     </style>
 </head>
+<a href="c:\users\008720420\downloads\mysolution_ver2\views\dog\register.cshtml">c:\users\008720420\downloads\mysolution_ver2\views\dog\register.cshtml</a>
 
 <body>
     <div class="layout">
@@ -44,14 +45,13 @@
 
                 <form asp-action="Register" asp-controller="Dog" method="post">
 
-                   
-                    < input asp-for="DogName" placeholder="Enter dog's name" />
+                    <input asp-for="DogName" placeholder="Enter dog's name" />
                     <br><br>
 
-                    < select asp-for="DobKnown">Is Date of Birth known?</>
-                    
-                        <option>Yes</option>
-                        <option>No</option>
+                    <label>Is Date of Birth known?</label>
+                    <select asp-for="DobKnown">
+                        <option value="Yes">Yes</option>
+                        <option value="No">No</option>
                     </select>
                     <br><br>
 
@@ -127,27 +127,29 @@
                     </select>
                     <br><br>
 
-                    <label asp-for="Breed">Breed</label>                    
-                        <option>Mix</option>
-                        <option>Border Collie</option>
-                        <option>Bulldog</option>
-                        <option>Lab</option>
-                     <br><br>
+                    <label asp-for="Breed">Breed</label><br>
+
+                    <label><input type="radio" asp-for="Breed" value="Mix"> Mix</label><br>
+                    <label><input type="radio" asp-for="Breed" value="Border Collie"> Border Collie</label><br>
+                    <label><input type="radio" asp-for="Breed" value="Bulldog"> Bulldog</label><br>
+                    <label><input type="radio" asp-for="Breed" value="Lab"> Lab</label><br>
+
+                    <br><br>
 
                     <label>📝 Notes</label>
                     <textarea asp-for="Notes" rows="3" placeholder="If breed is not listed, enter here"></textarea>
                     <br><br>
 
                     <label>Interaction with other dogs</label><br>
-                    <label><input type="radio" asp-for="Interaction"> Friendly</label>
-                    <label><input type="radio" asp-for="Interaction"> Selective</label>
-                    <label><input type="radio" asp-for="Interaction"> Reactive</label>
+                    <label><input type="radio" asp-for="Interaction" value="Friendly"> Friendly</label>
+                    <label><input type="radio" asp-for="Interaction" value="Selective"> Selective</label>
+                    <label><input type="radio" asp-for="Interaction" value="Reactive"> Reactive</label>
                     <br><br>
 
                     <label>Triggers</label><br>
-                    <label><input type="radio" asp-for="Triggers"> Food Guarding</label>
-                    <label><input type="radio" asp-for="Triggers"> Toy Guarding</label>
-                    <label><input type="radio" asp-for="Triggers"> Loud Noises</label>
+                    <label><input type="radio" asp-for="Triggers" value="Food Guarding"> Food Guarding</label>
+                    <label><input type="radio" asp-for="Triggers" value="Toy Guarding"> Toy Guarding</label>
+                    <label><input type="radio" asp-for="Triggers" value="Loud Noises"> Loud Noises</label>
                     <br><br>
 
                     <label>Additional Notes</label>

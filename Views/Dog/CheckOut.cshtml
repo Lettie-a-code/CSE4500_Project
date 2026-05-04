@@ -27,8 +27,17 @@
 
         <div class="menu">
             <ul>
-                <li><a asp-controller="Dashboard" asp-action="Admin">Home</a></li>
-                <li><a asp-controller="Dog" asp-action="DogList">View dogs registered</a></li>
+                @if (User.IsInRole("Admin"))
+                {
+                    <li><a asp-controller="Dashboard" asp-action="Admin">Home</a></li>
+                    <li><a asp-controller="Dog" asp-action="EnrollmentCensus">View dogs registered in program</a></li>
+                }
+                @if (User.IsInRole("Technician"))
+                {
+                    <li><a asp-controller="Dashboard" asp-action="Employee">Home</a></li>
+                    <li><a asp-controller="Dog" asp-action="DogList">Dogs in program today</a></li>
+
+                }
                 <li><a asp-controller="Report" asp-action="DailyReport">Daily dog report portal</a></li>
                 <li><a asp-controller="Dog" asp-action="CheckIn">Pooch check in</a></li>
                 <li><a asp-controller="Dog" asp-action="Register">New Client Registration</a></li>
