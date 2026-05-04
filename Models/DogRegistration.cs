@@ -1,9 +1,13 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
 namespace CSE4500.Models
+    
+
 {
     public class DogRegistration
     {
+        //Primary key is id
+        public int Id { get; set; }
         // Dog Info
         [Required]
         public required string DogName { get; set; }
